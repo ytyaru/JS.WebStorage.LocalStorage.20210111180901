@@ -15,9 +15,13 @@ export default class LocalStrageTest {
             console.log(`Saved !! ${this.KEY}=${this.Value}`);
         }
     }
-    destory() {
+    remove() {
         localStorage.removeItem(this.KEY);
-        console.log(`Destroied !! ${this.KEY}=${this.Value}`);        
+        console.log(`Removed !! ${this.KEY}=${this.Value}`);
+    }
+    clear() {
+        localStorage.clear();
+        console.log(`Cleared !! ${this.KEY}=${this.Value}`);
     }
 }
 

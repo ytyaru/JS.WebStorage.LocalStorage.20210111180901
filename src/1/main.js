@@ -3,5 +3,6 @@ window.addEventListener('load', (event) => {
     let test = new LocalStrageTest();
     test.load();
     test.save();
-    test.destory();
+    test.remove();
+    test.clear();
 });
