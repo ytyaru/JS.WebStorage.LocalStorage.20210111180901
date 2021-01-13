@@ -1,4 +1,4 @@
-class LocalStorageTest {
+export default class LocalStorageTest {
     #key = 'some-key';
     #value = new Date();
     constructor(key=null, value=null) {

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>JSのLocalStorageを使う。</title>
+    <script src='./main.js' type='module'></script>
+</head>
+<body>
+<h1>JSのLocalStorageを使う。</h1>
+<ul><li>JS.WebStorage.LocalStorage.20210111180901</li></ul>
+<p>　LocalStorageに保存したデータはブラウザを閉じても削除されない。storageイベントを用いればタブ間で同期できる。</p>
+<h2>storage イベント動作確認する方法</h2>
+　このページをブラウザの２つのタブで開く。最初のタブに戻るとイベントが発生している。
+<ol>
+<li>ブラウザを起動する</li>
+<li>タブＡでこのページを開く（ログを表示させる（Chromeならデベロッパツールで））</li>
+<li>タブＢでこのページを開く（ログを表示させる（Chromeならデベロッパツールで））</li>
+<li>タブＡに戻ってログを見る</li>
+<li>storageイベントが発生している</li>
+</ol>
+<h2>storage イベントの用途</h2>
+<p>　異なるタブ間におけるデータ同期。storageイベントは異なるタブ間におけるデータ同期が目的である。LocalStorageに保存したデータは異なるタブ間においても共有される。しかしタブＡで値を変更したとき、タブＢはまだ変更前の値である。タブＡで変更したタイミングでタブＢでも変更したいときにstorageイベントを用いる。</p>
+</body>
+</html>
